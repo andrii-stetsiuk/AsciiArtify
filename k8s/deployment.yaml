@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asciiartify
+  namespace: asciiartify
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asciiartify
+  template:
+    metadata:
+      labels:
+        app: asciiartify
+    spec:
+      containers:
+        - name: web
+          image: asciiartify:local
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 2
+            periodSeconds: 5
+          env:
+            - name: PYTHONDONTWRITEBYTECODE
+              value: "1"
+
+

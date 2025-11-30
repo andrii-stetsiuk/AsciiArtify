@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: asciiartify
+  namespace: asciiartify
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: asciiartify
+                port:
+                  number: 80
+
+
