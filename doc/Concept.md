@@ -101,7 +101,6 @@ curl -sS http://localhost:8080 | head -n 5
 k3d cluster delete asciiartify
 ```
 
-Вбудоване демо:
 
 <video src="demo/asciiartify-k3d-demo.mp4" controls muted playsinline poster="demo/asciiartify-k3d-demo.gif" width="960">
   Your browser does not support the video tag. See GIF below.
@@ -111,7 +110,7 @@ _Fallback (GIF if video is not present):_
 
 ![k3d asciiartify demo](demo/asciiartify-k3d-demo.gif)
 
-Посилання на демо‑запис (asciinema/GIF) у каталозі `doc/demo/`. Формат і подача натхнені прикладом у репозиторії `dive` — інструмент для аналізу шарів Docker‑образу [див. README demo секцію](https://github.com/wagoodman/dive?tab=readme-ov-file).
+
 
 ---
 
