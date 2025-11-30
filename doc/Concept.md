@@ -106,7 +106,6 @@ k3d cluster delete asciiartify
   Your browser does not support the video tag. See GIF below.
 </video>
 
-_Fallback (GIF if video is not present):_
 
 ![k3d asciiartify demo](demo/asciiartify-k3d-demo.gif)
 
