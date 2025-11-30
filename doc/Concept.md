@@ -101,11 +101,11 @@ curl -sS http://localhost:8080 | head -n 5
 k3d cluster delete asciiartify
 ```
 
+Демо:
 
 <video src="demo/asciiartify-k3d-demo.mp4" controls muted playsinline poster="demo/asciiartify-k3d-demo.gif" width="960">
   Your browser does not support the video tag. See GIF below.
 </video>
-
 
 ![k3d asciiartify demo](demo/asciiartify-k3d-demo.gif)
 
